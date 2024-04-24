@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block styles %}
+{{super()}}
+<style>
+    .fblogo {
+       width: calc(50% - .2%);
+       }
+       .imageleft {
+       float: left;
+       margin-right: .1%;
+       }
+       .imageright {
+       float: right;
+       margin-right: .1%;
+       content: 123
+       }
+
+       .imageclear {
+       clear: both;
+       }
+
+       #images{
+       margin: 0 auto;
+       max-width: 1000px
+       }
+       xmlns:width="http://www.w3.org/1999/xhtml" xmlns:float="http://www.w3.org/1999/xhtml"
+       xmlns:margin-right="http://www.w3.org/1999/xhtml" xmlns:clear="http://www.w3.org/1999/xhtml"
+       xmlns:max-width="http://www.w3.org/1999/xhtml" xmlns:margin="http://www.w3.org/1999/xhtml">
+</style>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="container">
+    <h1 id="header">Оригинальное изображение/Обработанное изображение</h1>
+
+    <img class="fblogo imageleft" src="{{ image_src }}" alt="User Image" id="image">
+    <img class="fblogo imageright" src="{{ processed_src }}" alt="User Image" id="processed_image">
+    <p style="font-size: 20px;text-align: center;">Оценка количества фишек = {{components}}</p>
+    {% for stat in final_stats %}
+    <p style="font-size: 20px;text-align: center;"> {{ stat }}</p>
+    {% endfor %}
+
+    <div style="text-align: center;">
+        {{ wtf.quick_form(upload_btn) }}
+    </div>
+</div>
+
+{% endblock %}

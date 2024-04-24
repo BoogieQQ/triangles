@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div align="center">
+    <h2>
+      Загрузите изображение:
+    </h2>
+    <br>
+    {{ wtf.quick_form(load_picture_form) }}
+</div>
+{% endblock %}

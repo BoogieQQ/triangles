@@ -1,0 +1,8 @@
+Flask~=3.0.2
+flask_bootstrap
+wtforms~=3.1.2
+flask_wtf
+opencv-python~=4.9.0.80
+Werkzeug~=3.0.1
+numpy~=1.26.1
+scipy~=1.11.3

@@ -1,0 +1,1 @@
+docker run -it --rm -p 8001:8001 triangles
